@@ -25,11 +25,4 @@ class UtilTest {
                 Util.checkValidStringLength(CAR_NAME_ERROR));
     }
 
-    @Test
-    @DisplayName("0부터 9사이의 random Int 생성 Test")
-    void createRandomIntTest() {
-        for (int i = 0; i < 100; i++) {
-            assertThat(Util.createRandomInt()).isBetween(RANDOM_MIN, RANDOM_MAX);
-        }
-    }
 }
