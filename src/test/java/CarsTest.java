@@ -34,4 +34,16 @@ class CarsTest {
             assertThat(car).isEqualTo(carList.get(i++));
         }
     }
+
+    @Test
+    @DisplayName("Cars를 시도회수만큼 반복해 play했을때의 결과값 확인 Test")
+    void playTest() {
+        List<Car> carList = Arrays.asList(
+                car1, car2, car3
+        );
+        Cars cars = new Cars(carList);
+        int playCount = 4;
+
+        cars.play(playCount);
+    }
 }
