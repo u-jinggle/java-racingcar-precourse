@@ -1,6 +1,6 @@
 public class Car {
     private final String name;
-    private final int position;
+    private int position;
 
     public Car(String name) {
         this.name = name;
@@ -15,4 +15,9 @@ public class Car {
         return position;
     }
 
+    public void moveForward(int randomInt) {
+        if(randomInt >= 4){
+            this.position++;
+        }
+    }
 }
