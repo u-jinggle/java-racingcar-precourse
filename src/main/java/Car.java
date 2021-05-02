@@ -16,8 +16,18 @@ public class Car {
     }
 
     public void moveForward(int randomInt) {
-        if(randomInt >= 4){
+        if (randomInt >= 4) {
             this.position++;
         }
+    }
+
+    public String playResult() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(name);
+        stringBuilder.append(" : ");
+        for (int p = 0; p < position; p++) {
+            stringBuilder.append("-");
+        }
+        return stringBuilder.toString();
     }
 }
