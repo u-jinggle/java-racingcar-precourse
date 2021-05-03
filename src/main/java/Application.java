@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Application {
@@ -8,6 +10,19 @@ public class Application {
 
         Scanner scanCount = new Scanner(System.in);
         System.out.println("시도할 회수는 몇번인가요?");
-        Integer count = scanCount.nextInt();
+        int playCount = scanCount.nextInt();
+
+        String[] carNameArray = Util.stringToArray(carsName);
+
+        List<Car> carList = new ArrayList<>();
+        for (String carName : carNameArray) {
+            carList.add(new Car(carName));
+        }
+
+        Cars cars = new Cars(carList);
+        cars.play(playCount);
+        String winner = cars.getWinner();
+
+        System.out.println(winner);
     }
 }
