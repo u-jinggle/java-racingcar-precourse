@@ -25,4 +25,21 @@ class UtilTest {
                 Util.checkValidStringLength(CAR_NAME_ERROR));
     }
 
+    @Test
+    @DisplayName("입력받은 자동차 이름이 한개일 경우 IllegalArgumentException Exception 발생 Test")
+    void checkCarsNumTest() {
+        String[] carsNameArray = "aa".split(",");
+        Assertions.assertThrows(IllegalArgumentException.class, () ->
+                Util.checkCarsNum(carsNameArray));
+    }
+
+    @Test
+    @DisplayName("입력받은 시도회수가 1보다 작은경우 IllegalArgumentException Exception 발생 Test")
+    void checkPlayNumTest() {
+        int minusInt = 0;
+        Assertions.assertThrows(IllegalArgumentException.class, () ->
+                Util.checkPlayNum(minusInt));
+    }
+
+
 }
