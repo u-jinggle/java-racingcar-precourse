@@ -5,9 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class UtilTest {
-    private static final int RANDOM_MIN = 0;
-    private static final int RANDOM_MAX = 9;
-
     @Test
     @DisplayName(",로 연결된 입력받은 문자열을 배열 형태로 변환하는 Test")
     void stringToArrayTest() {
