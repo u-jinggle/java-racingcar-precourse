@@ -46,10 +46,11 @@ class CarsTest {
     }
 
     @Test
+    @DisplayName("Cars의 position이 가장 큰 car의 이름 출력 확인 Test")
     void getWinnerTest() {
-        int car1Move = 4;
-        int car2Move = 5;
-        int car3Move = 5;
+        int car1Move = 2;
+        int car2Move = 4;
+        int car3Move = 4;
 
         for (int i = 0; i < car1Move; i++) {
             car1.moveForward(9);
