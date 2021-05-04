@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Application {
@@ -6,10 +5,7 @@ public class Application {
         String[] carNameArray = ScanCarNames.scan();
         Integer playCount = ScanPlayNum.scan();
 
-        List<Car> carList = new ArrayList<>();
-        for (String carName : carNameArray) {
-            carList.add(new Car(carName));
-        }
+        List<Car> carList = Car.makeCarList(carNameArray);
 
         Cars cars = new Cars(carList);
         cars.play(playCount);

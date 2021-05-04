@@ -37,7 +37,13 @@ public class Cars {
     }
 
     private void mapPlayResult(Map<Integer, String> winner, Car car) {
-        winner.computeIfPresent(car.getPosition(), (position, name) -> winner.get(position).concat(", ").concat(car.getName()));
-        winner.computeIfAbsent(car.getPosition(), key -> car.getName());
+        winner.computeIfPresent(
+                car.getPosition(), (position, name) -> winner.get(position)
+                                                        .concat(", ")
+                                                        .concat(car.getName())
+        );
+        winner.computeIfAbsent(
+                car.getPosition(), key -> car.getName()
+        );
     }
 }

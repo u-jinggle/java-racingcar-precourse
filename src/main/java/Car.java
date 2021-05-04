@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
     private final String name;
     private int position;
@@ -29,5 +32,13 @@ public class Car {
             stringBuilder.append("-");
         }
         return stringBuilder.toString();
+    }
+
+    public static List<Car> makeCarList(String[] carNameArray) {
+        List<Car> carList = new ArrayList<>();
+        for (String carName : carNameArray) {
+            carList.add(new Car(carName));
+        }
+        return carList;
     }
 }
